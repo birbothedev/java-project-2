@@ -7,7 +7,7 @@ public class Main {
 
         ArrayList<Enemy> enemyList = new ArrayList<>();
 
-        for(int i=0; i < 10; i++){
+        for(int i=0; i < 100; i++){
             // get random number 1-4
             int randomNumber = (int)((Math.random() * 4) + 1);
 
@@ -18,12 +18,13 @@ public class Main {
         // loop through enemies array
          for(Enemy enemy : enemyList){
              System.out.println(enemy.attack());
+             // getting weight and height if needed
 //             System.out.println(enemy.getHeight());
 //             System.out.println(enemy.getWeight());
          }
     }
 
-    // initially i had all this happening inside the for loop but i wanted to clean up the main class so i added a function to do it
+    // initially i had all this happening inside the for loop but i wanted to clean up the main class
     public static Enemy generateEnemy(int i){
         if (i == 1){
             Ghost ghost = new Ghost();
