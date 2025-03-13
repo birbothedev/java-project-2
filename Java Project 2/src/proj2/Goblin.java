@@ -2,40 +2,20 @@ package proj2;
 
 public class Goblin extends Enemy {
 
-    int height;
-    int weight;
+    public Goblin(){
 
-    int heightMin = 70;
-    int heightMax = 100;
+        this.heightMin = 70;
+        this.heightMax = 100;
 
-    int weightMin = 5;
-    int weightMax = 10;
+        this.weightMin = 5;
+        this.weightMax = 10;
 
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public int setWeight() {
-
-        // i did it this way so i could copy/paste it for every monster without changing variables Lol
-        this.weight = (weightMin + (int)(Math.random() * ((weightMax - weightMin) + 1)));
-        return weight;
-    }
-
-    public int setHeight() {
-
-        // same with this one lol
-        this.height = (heightMin + (int)(Math.random() * ((heightMax - heightMin) + 1)));
-        return height;
+        this.setHeight();
+        this.setWeight();
     }
 
     @Override
-    public void attack() {
-        System.out.println("Gurgle!");
+    public String attack() {
+        return "Gurgle!";
     }
 }

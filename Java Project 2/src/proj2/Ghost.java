@@ -2,27 +2,17 @@ package proj2;
 
 public class Ghost extends Enemy{
 
-    int weight;
-    int height;
+    public Ghost(){
+        this.heightMin = 90;
+        this.heightMax = 150;
 
-    int heightMin = 90;
-    int heightMax = 150;
-
-    public Ghost (){
+        this.setHeight();
         this.weight = 0;
     }
 
-    public int getHeight() {
-        return height;
-    }
-
-    public int setHeight() {
-        this.height = (heightMin + (int)(Math.random() * ((heightMax - heightMin) + 1)));
-        return height;
-    }
 
     @Override
-    public void attack() {
-        System.out.println("Boo!");
+    public String attack() {
+        return "Boo!";
     }
 }
